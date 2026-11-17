@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: book-management-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_PATH
+        value: /tmp/books.db

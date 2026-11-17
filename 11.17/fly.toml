@@ -1,0 +1,18 @@
+app = "book-management-api"
+primary_region = "nrt"
+
+[build]
+
+[env]
+  DATABASE_PATH = "/data/books.db"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[mounts]]
+  source = "books_data"
+  destination = "/data"

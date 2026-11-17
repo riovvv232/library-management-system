@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_PATH: /data/books.db
+    volumes:
+      - books-data:/data
+
+volumes:
+  books-data:
